@@ -1,3 +1,23 @@
+terraform {
+  required_version = ">= 1.0"
+  
+  # Add this backend configuration
+  backend "remote" {
+    organization = "pranav767"  # Replace with your actual org name
+    
+    workspaces {
+      name = "terraform-github-actions"  # Replace with your workspace name
+    }
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
 provider "aws" {
   region = "us-west-2"
 }
