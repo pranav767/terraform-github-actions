@@ -1,12 +1,12 @@
 terraform {
   required_version = ">= 1.0"
-  
+
   # Add this backend configuration
   backend "remote" {
-    organization = "pranav767"  # Replace with your actual org name
-    
+    organization = "pranav767" # Replace with your actual org name
+
     workspaces {
-      name = "terraform-github-actions"  # Replace with your workspace name
+      name = "terraform-github-actions" # Replace with your workspace name
     }
   }
 
